@@ -37,8 +37,20 @@
     <hr />
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-
+    <div>
+        <table>
+            <tr th:each="item2 : ${jobs}">
+                <td >
+                    <p>ID: <span th:text="${item2.id}"></span></p>
+                    <p>Name: <span th:text="${item2.name}"></span></p>
+                    <p>Employer: <span th:text="${item2.employer}"></span></p>
+                    <p>Position: <span th:text="${item2.positionType}"></span></p>
+                    <p>Location: <span th:text="${item2.location}"></span></p>
+                    <p>Skills: <span th:text="${item2.coreCompetency}"></span></p>
+                </td>
+            </tr>
+        </table>
+    </div>
 </div>
-
 </body>
 </html>
